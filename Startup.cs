@@ -22,7 +22,7 @@ namespace vega
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc(); // Add services
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,9 +41,9 @@ namespace vega
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+            app.UseStaticFiles(); // Middleware to run static file 
 
-            app.UseMvc(routes =>
+            app.UseMvc(routes =>   //midlleware to run ony MVC 
             {
                 routes.MapRoute(
                     name: "default",
